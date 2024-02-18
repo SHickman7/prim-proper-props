@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import './App.css';
+import Header from '../Header/Header'
 
 function App() {
   let [guestList, setGuestList] = useState([]);
@@ -53,9 +54,7 @@ function App() {
   console.log(newGuestMeal)
   return (
     <div className="App">
-      <header>
-        <h1>Prim Proper Props</h1>
-      </header>
+      <Header />
       <h2>Party Leader</h2>
       {guestList[0] && <h3>{guestList[0].name}</h3>}
       <h2>Add a new guest</h2>
